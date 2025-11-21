@@ -1,21 +1,19 @@
-# Sensor-Data-Fusion
-Collection of sensor fusion and computer vision projects: IMU accelerometer–gyroscope processing, complementary filters, Kalman Filters, face detection (Viola–Jones), YOLO object detection, camera calibration, data visualization and real-time tracking experiments.
-A complete Python collection of algorithms and tools used in Sensor Networks & Sensor Fusion — including IMU processing, accelerometer/gyroscope fusion, complementary filtering, Kalman Filters, computer vision (Viola–Jones, YOLO), camera calibration, and real-time visualization utilities.
+A comprehensive collection of sensor fusion and computer vision projects implemented in Python.
+This repository includes IMU accelerometer–gyroscope processing, complementary filtering, Kalman Filters, Viola–Jones face detection, YOLO object detection, camera calibration, data visualization, and real-time tracking tools.
 
-This repository is designed for students, researchers, and engineers working with robotics, drones, autonomous systems, or embedded platforms.
-
+Designed for students, researchers, and engineers working on robotics, drones, autonomous systems, embedded devices, or anyone learning Sensor Networks & Data Fusion.
 🚀 Features
 🔵 IMU Processing & Fusion
 
 Accelerometer-based orientation estimation
 
-Gyroscope integration (raw angle estimation)
+Gyroscope integration (raw angle computation)
 
 Complementary Filter for stable roll/pitch estimation
 
-Real-time fusion of accelerometer + gyro
+Real-time accelerometer + gyro fusion
 
-Drift reduction & noise-robust filtering
+Noise-resistant filtering & drift reduction
 
 Playback of recorded IMU datasets
 
@@ -33,85 +31,81 @@ Unscented Kalman Filter (UKF)
 
 🔶 Computer Vision
 
-Camera Calibration utilities
+Camera calibration utilities
 
-Viola–Jones face detection
+Viola–Jones face detection (Haar cascades)
 
-YOLO-based object detection and experiments
+YOLO-based deep-learning object detection
 
 🔧 Utility Tools
 
-Data reader for streamed or recorded sensor values
+Data reader for streamed or recorded data
 
-Real-time plotting using DearPyGui
+Real-time visualization using DearPyGui
 
 File I/O helpers
 
 Mathematical helper functions
-...
-🗂 Project Structure
 sensor-data-fusion/
 │
 ├── src/
 │   ├── fusion/                # IMU fusion algorithms
-│   ├── kalman/                # Kalman filter modules
-│   ├── vision/                # Vision tools (camera, detection)
-│   └── utils/                 # Shared utilities (plotting, file IO)
+│   ├── kalman/                # Kalman filter models
+│   ├── vision/                # Camera calibration & detection tools
+│   └── utils/                 # Plotting, math & file utilities
 │
 ├── data/                      # IMU recordings, calibration files
 │   └── imudata.txt
 │
-├── examples/                  # Ready-to-run demos
-├── notebooks/                 # Experiments + exploration
+├── examples/                  # Ready-to-run demo scripts
+├── notebooks/                 # Jupyter experiments
 └── README.md
-...
 📊 Real-Time IMU Visualization
 
-The repository includes a real-time visualization dashboard built with DearPyGui:
+Includes a real-time visualization dashboard using DearPyGui, showing:
 
 3-axis accelerometer
 
 3-axis gyroscope
 
-Accelerometer-derived angles
+Accelerometer-derived roll/pitch
 
-Gyroscope-integrated angles
+Gyroscope-integrated orientation
 
-Complementary filter orientation
+Complementary filter fused output
 
-Works with both:
+Works with:
 
-Live sensor data
+Live streaming IMU data
 
-Recorded datasets (imudata.txt)
+Pre-recorded dataset (imudata.txt)
 
-🧪 Example: Complementary Filter Output
+🧪 Complementary Filter Example
 
-This repository contains clean and modular implementations of:
+This project includes clear implementations of:
 
 accel_to_angle() → roll/pitch from accelerometer
 
-GyroIntegrator → integrating gyro rates
+GyroIntegrator → integrate angular velocity
 
-ComplementaryFilter → fused orientation estimation
+ComplementaryFilter → fused orientation estimate
 
-Fusion equation:
+Fusion Equation:
 
 θ_fused = (1 - k) * (θ_gyro + ω * dt) + k * (θ_accel)
 
 
 Where:
 
-gyro = stable short-term, drifts long-term
+Gyroscope = stable short-term, drifts long-term
 
-accelerometer = noisy short-term, stable long-term
+Accelerometer = noisy short-term, stable long-term
 
-typical k ≈ 0.02–0.05
-
+Typical k ≈ 0.02–0.05
 📁 Dataset Included
 imudata.txt
 
-A 30-second IMU recording with:
+A 30-second IMU recording containing:
 
 timestamp
 
@@ -119,13 +113,13 @@ accelerometer (ax, ay, az)
 
 gyroscope (p, q, r)
 
-Used for evaluating:
+Useful for evaluating:
 
-accelerometer-only orientation
+Accelerometer-only orientation
 
-gyro-only orientation
+Gyro-only orientation
 
-fused complementary filter output
+Complementary filter fusion
 
 🛠 Requirements
 numpy
@@ -134,20 +128,24 @@ dearpygui
 scipy
 
 
-(Additional libraries such as OpenCV or Ultralytics may be required for YOLO/CV modules.)
+Additional optional packages (for CV/YOLO):
 
-🎯 Goals of This Repository
+opencv-python
+ultralytics
+torch
 
-This project grows as part of coursework and experimentation in Sensor Networks & Data Fusion.
+🎯 Goal of This Repository
+
+This project is part of academic coursework and self-driven experimentation in Sensor Networks & Data Fusion.
 It aims to provide:
 
 A complete portfolio project
 
 A practical template for sensor fusion pipelines
 
-A clean implementation of classical filtering techniques
+Clean implementations of core filtering techniques
 
-A playground for robotics & embedded system exploration
+A playground for robotics and embedded system exploration
 
 👤 Author
 
