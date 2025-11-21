@@ -48,7 +48,7 @@ Real-time plotting using DearPyGui
 File I/O helpers
 
 Mathematical helper functions
-
+...
 🗂 Project Structure
 sensor-data-fusion/
 │
@@ -64,7 +64,7 @@ sensor-data-fusion/
 ├── examples/                  # Ready-to-run demos
 ├── notebooks/                 # Experiments + exploration
 └── README.md
-
+...
 📊 Real-Time IMU Visualization
 
 The repository includes a real-time visualization dashboard built with DearPyGui:
