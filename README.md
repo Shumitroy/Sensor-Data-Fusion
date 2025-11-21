@@ -151,6 +151,6 @@ A playground for robotics & embedded system exploration
 
 👤 Author
 
-Your Name
+Shumit Roy
 Technische Hochschule Ingolstadt
 Sensor Networks & Sensor Fusion
